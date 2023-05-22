@@ -4,14 +4,14 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits<{
-  (e: "foo", id: number): void;
-  (e: "bar", name: string, ...rest: any[]): void;
-}>();
 // const emit = defineEmits<{
-//   foo: [id: number];
-//   bar: [name: string, ...rest: any[]];
+//   (e: "foo", id: number): void;
+//   (e: "bar", name: string, ...rest: any[]): void;
 // }>();
+const emit = defineEmits<{
+  foo: [id: number];
+  bar: [name: string, ...rest: any[]];
+}>();
 
 const handleClickFoo = () => {
   emit("foo", 1);
