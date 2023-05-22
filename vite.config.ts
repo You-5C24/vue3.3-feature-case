@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [
     vue({
       script: {
-        propsDestructure: true,
+        propsDestructure: true, // defineProps的解构不丢失响应式的配置
+        defineModel: true,
       },
     }),
   ],
