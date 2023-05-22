@@ -3,9 +3,14 @@
 </template>
 
 <script setup lang="ts">
+import { watchEffect } from "vue";
 import type { HelloProps } from "./helloWord";
 
-defineProps<HelloProps & { age: number }>();
+const { msg } = defineProps<HelloProps & { age: number }>();
+// props.msg
+watchEffect(() => {
+  console.log(msg, "watch");
+});
 </script>
 
 <style scoped></style>

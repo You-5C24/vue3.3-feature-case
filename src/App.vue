@@ -1,5 +1,6 @@
 <template>
-  <HelloWorld msg="hello" :age="12" />
+  <HelloWorld :msg="msg" :age="12" />
+  <button @click="HandleChangeMsg">click</button>
   <Generic age="10" :names="['1', '2']" />
   <Emmits />
   <Sloter>
@@ -17,6 +18,13 @@ import HelloWorld from "./components/HelloWorld.vue";
 import Generic from "./components/Generic.vue";
 import Emmits from "./components/Emmits.vue";
 import Sloter from "./components/Slot.vue";
+import { ref } from "vue";
+
+const msg = ref("heihei");
+
+const HandleChangeMsg = () => {
+  msg.value = "changeHeiHei";
+};
 </script>
 
 <style scoped></style>
