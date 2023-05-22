@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="hello" />
+  <HelloWorld msg="hello" :age="12" />
 </template>
 
 <script setup lang="ts">
